@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { SvgPaths } from './pizza/rotating-pizza';
+import Pages from './pages/Pages';
+import styled from 'styled-components';
 
-function App() {
+const Wrapper = styled.div`
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: 'content image';
+
+  @media (max-width: 570px) {
+    grid-template-rows: 10vh 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'image'
+      'content';
+    justify-items: center;
+  }
+`;
+const App = () => {
+  const [yOffset, setYoffSet] = useState(0);
+  const [prevYOffset, setPrevYOffSet] = useState(0);
+  const [scrollHeight, setOffsetHeight] = useState(0);
+  const handleScroll = (e) => {
+    setPrevYOffSet(yOffset);
+    console.dir(e.target);
+
+    setYoffSet(e.target.scrollTop);
+    setOffsetHeight(e.target.scrollHeight);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper className='App'>
+      <SvgPaths
+        scrollHeight={scrollHeight}
+        yOffset={yOffset}
+        prevYOffset={prevYOffset}
+      />
+      <Pages handleScroll={handleScroll} title={'about'} />
+    </Wrapper>
   );
-}
+};
 
 export default App;
