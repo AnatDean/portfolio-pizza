@@ -4,21 +4,29 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 const Text = styled.p`
   font-weight: bold;
-  font-size: ${rem('30px')};
+  font-size: ${rem('25px')};
 `;
 const SubText = styled.p`
   font-weight: bold;
   font-size: ${rem('15px')};
   color: grey;
 `;
-
+const Title = styled.h1`
+  font-weight: bold;
+  font-size: ${rem('30px')};
+  text-decoration: underline;
+`;
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+`;
 const Contact = () => (
-  <section>
-    <h1>Get In touch</h1>
-    <SocialIcons />
+  <Section>
+    <Title>Get In touch</Title>
     <Text>anat.dean@hotmail.com</Text>
     <SubText>Yes, I still use hotmail!</SubText>
-  </section>
+    <SocialIcons align={true} />
+  </Section>
 );
 
 export default Contact;

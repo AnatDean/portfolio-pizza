@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import { SvgPaths } from './pizza/rotating-pizza';
-import Pages from './pages/Pages';
+import { SvgPaths } from './components/pizza/rotating-pizza';
+import Pages from './components/pages/Pages';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`

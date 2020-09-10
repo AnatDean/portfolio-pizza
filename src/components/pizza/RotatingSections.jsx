@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const SvgSection = ({ sectionPaths, section, tabIndex }) => {
   return (
@@ -7,9 +7,6 @@ const SvgSection = ({ sectionPaths, section, tabIndex }) => {
       role={'img'}
       tabIndex={tabIndex}
       focusable={true}
-      // onFocus={() => setSectionInFocus(section)}
-      // onMouseEnter={() => setSectionInFocus(section)}
-      // onMouseLeave={() => setSectionInFocus('')}
       key={section}>
       {sectionPaths.map(({ path, ...restOfPath }, i) => {
         return (
@@ -19,10 +16,7 @@ const SvgSection = ({ sectionPaths, section, tabIndex }) => {
             d={path}
             style={{
               ...restOfPath,
-              // fill:
-              //   isDimmed && section !== 'corners'
-              //     ? 'rgb(133, 129, 129, 50%)'
-              //     : restOfPath.fill,
+             
             }}
           />
         );

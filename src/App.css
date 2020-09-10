@@ -6,8 +6,14 @@ body,
   overflow-x: hidden;
   background-color: palegoldenrod;
   font-family: 'Montserrat', sans-serif;
+  
 }
 
 *:focus {
   background-color: palegreen;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }

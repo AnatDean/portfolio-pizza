@@ -1,8 +1,8 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import githubAnimationData from '../assetts/lotties/github.json';
-import linkedInSVG from '../assetts/lotties/linkedin.svg';
-import youtubeAnimation from '../assetts/lotties/youtube.json';
+import githubAnimationData from '../../assetts/lotties/github.json';
+import linkedInSVG from '../../assetts/lotties/linkedin.svg';
+import youtubeAnimation from '../../assetts/lotties/youtube.json';
 import styled from 'styled-components';
 
 const defaultOptions = {
@@ -18,24 +18,21 @@ const Social = styled.img`
   margin: 1em;
 `;
 
-const SizedA = styled.a.attrs((props) => props)`
-  height: 5em;
-  margin: 1em;
-`;
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  ${({ align }) => align && `align-self: flex-end;`}
 `;
 
-const SocialIcons = () => (
-  <Wrapper>
+const SocialIcons = ({ align }) => (
+  <Wrapper align={align}>
     <a
       target='_blank'
       rel='noopener noreferrer'
       href='https://www.linkedin.com/in/anat-dean-59b993ab'>
-      <Social alt={'linkedIn logo'} src={linkedInSVG} />
+      <Social alt={'linkedIn'} src={linkedInSVG} />
     </a>
     <a
       target='_blank'

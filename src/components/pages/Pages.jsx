@@ -12,14 +12,17 @@ const MainWrapper = styled.main`
   overflow-y: scroll;
   text-align: start;
   padding: 1vh 40vh 0vh 2vh;
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
 
   section {
-    height: 90vh;
+    min-height: 90vh;
   }
 
   @media (max-width: 570px) {
     margin-top: 5vh;
     padding: 5vh 3vh 0vh 3vh;
+    width: 95%;
   }
 `;
 
