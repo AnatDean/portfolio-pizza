@@ -5,4 +5,5 @@ export default styled.p`
   font-weight: bold;
   font-size: ${rem("15px")};
   color: grey;
+  cursor: default;
 `;
