@@ -1,9 +1,9 @@
-import React from 'react';
- 
-const CheckBox = ({ section: { text, isChecked, handler } }) => (
+import React from "react";
+
+const CheckBox = ({ text, isChecked, handler }) => (
   <label>
     {text}
-    <input type='checkbox' checked={isChecked} onChange={handler} />
+    <input type="checkbox" checked={isChecked} onChange={handler} />
   </label>
 );
 

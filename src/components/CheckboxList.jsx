@@ -51,7 +51,7 @@ const CheckBoxList = () => {
     <Wrapper>
       <Form>
         {sections.map((section) => (
-          <CheckBox key={section.text} section={section} />
+          <CheckBox key={section.text} {...section} />
         ))}
       </Form>
       <TechList display={displaySection} />
