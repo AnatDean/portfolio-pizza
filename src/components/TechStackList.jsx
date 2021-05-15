@@ -63,6 +63,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
+  cursor: default;
   @media (max-width: 640px) {
     margin-right: ${rem("16px")};
   }
