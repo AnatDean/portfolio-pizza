@@ -1,11 +1,13 @@
-import React from 'react';
-import SocialIcons from '../social/icons';
-import styled from 'styled-components';
-import {rem} from 'polished'
+import React from "react";
+import SocialIcons from "../social/icons";
+import styled from "styled-components";
+import { rem } from "polished";
+import { Title } from "../atoms/";
+
 const List = styled.ul`
   list-style: none;
   font-size: 1.5em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   padding: 0;
   margin: 0;
@@ -15,21 +17,15 @@ const List = styled.ul`
 `;
 
 const Section = styled.section`
-  text-align:start;
+  text-align: start;
 `;
-
-const Title = styled.h1`
-font-weight: bold;
-font-size: ${rem('30px')};
-text-decoration: underline;
-`
 
 const Home = () => (
   <Section>
-    <Title>Anat Dean</Title>
+    <Title fontSize={rem("60px")}>Anat Dean</Title>
     <List>
       <li>Developer</li>
-      <li>Lecturer</li>
+      <li>Mentor</li>
       <li>Diversity Advocate</li>
     </List>
     <SocialIcons />
