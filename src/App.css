@@ -5,12 +5,7 @@ body,
   height: 100vh;
   overflow-x: hidden;
   background-color: palegoldenrod;
-  font-family: 'Montserrat', sans-serif;
-  
-}
-
-*:focus {
-  background-color: palegreen;
+  font-family: "Montserrat", sans-serif;
 }
 
 ::-webkit-scrollbar {

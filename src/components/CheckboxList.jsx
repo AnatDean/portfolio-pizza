@@ -37,7 +37,8 @@ const CheckBoxList = () => {
     "Languages",
     "Front End",
     "Back End",
-    "Dev Ops LEARNING",
+    "Testing",
+    "Dev Ops (currently learning)",
     "Other",
   ].map((section) => {
     return {
