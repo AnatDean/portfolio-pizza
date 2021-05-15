@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import CheckBox from './CheckBox';
-import styled from 'styled-components';
-import TechList from './TechStackList';
-import { rem } from 'polished';
+import CheckBox from "./CheckBox";
+import styled from "styled-components";
+import TechList from "./TechStackList";
+import { rem } from "polished";
 
 const Form = styled.form`
   width: 100%;
-  font-size: ${rem('20px')};
+  font-size: ${rem("20px")};
   display: flex;
   flex-flow: column wrap;
 
@@ -16,8 +16,8 @@ const Form = styled.form`
   }
 
   label {
-    padding: ${rem('10px')};
-    padding-left:0;
+    padding: ${rem("10px")};
+    padding-left: 0;
   }
 `;
 
@@ -31,35 +31,21 @@ const Wrapper = styled.div`
 `;
 
 const CheckBoxList = () => {
-  const [displaySection, setDisplaySection] = useState('Front End');
+  const [displaySection, setDisplaySection] = useState("Front End");
 
   const sections = [
-    {
-      text: 'Languages',
-      isChecked: displaySection === 'Languages',
-      handler: () => setDisplaySection('Languages'),
-    },
-    {
-      text: 'Front End',
-      isChecked: displaySection === 'Front End',
-      handler: () => setDisplaySection('Front End'),
-    },
-    {
-      text: 'Back End',
-      isChecked: displaySection === 'Back End',
-      handler: () => setDisplaySection('Back End'),
-    },
-    {
-      text: 'Dev Ops',
-      isChecked: displaySection === 'Dev Ops',
-      handler: () => setDisplaySection('Dev Ops'),
-    },
-    {
-      text: 'Other',
-      isChecked: displaySection === 'Other',
-      handler: () => setDisplaySection('Other'),
-    },
-  ];
+    "Languages",
+    "Front End",
+    "Back End",
+    "Dev Ops LEARNING",
+    "Other",
+  ].map((section) => {
+    return {
+      text: section,
+      isChecked: displaySection === section,
+      handler: () => setDisplaySection(section),
+    };
+  });
 
   return (
     <Wrapper>
