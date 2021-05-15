@@ -1,7 +1,7 @@
 import React from "react";
 import SocialIcons from "../social/icons";
 import styled from "styled-components";
-import { Title, Text, SubText } from "../atoms";
+import { Title, SubText, Link } from "../atoms";
 
 const Section = styled.section`
   display: flex;
@@ -10,7 +10,7 @@ const Section = styled.section`
 const Contact = () => (
   <Section>
     <Title>Get In touch</Title>
-    <Text>anat.dean@hotmail.com</Text>
+    <Link href="mailto:anat.dean@hotmail.com">anat.dean@hotmail.com</Link>
     <SubText>Yes, I still use hotmail!</SubText>
     <SocialIcons align={true} />
   </Section>
